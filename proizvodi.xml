@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<!DOCTYPE proizvodi SYSTEM "proizvodi.dtd">
-<proizvodi>
+<!--<!DOCTYPE proizvodi SYSTEM "proizvodi.dtd">-->
+<proizvodi xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:noNamespaceSchemaLocation="proizvodi.xsd">
     <proizvod kategorija="laptopovi">
         <cena>155500</cena>
         <tekstoglasa>Lenovo Legion Y530-15ICH 81FV00VQYA</tekstoglasa>
@@ -12,7 +13,7 @@
         <akcije>
             <akcija>
                 <cena>120000</cena>
-                <datumisteka>30-04-2021</datumisteka>
+                <datumisteka>2021-04-30</datumisteka>
             </akcija>
         </akcije>
     </proizvod>
@@ -26,7 +27,7 @@
         <akcije>
             <akcija>
                 <cena valuta="eur">220</cena>
-                <datumisteka>28-04-2021</datumisteka>
+                <datumisteka>2021-04-30</datumisteka>
             </akcija>
         </akcije>
     </proizvod>
@@ -40,11 +41,11 @@
         <akcije>
             <akcija>
                 <cena>10490</cena>
-                <datumisteka>30-04-2021</datumisteka>
+                <datumisteka>2021-04-28</datumisteka>
             </akcija>
             <akcija>
                 <cena>11000</cena>
-                <datumisteka>15-05-2021</datumisteka>
+                <datumisteka>2021-05-15</datumisteka>
             </akcija>
         </akcije>
     </proizvod>
