@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proizvodi</title>
+</head>
+<body>
+    <nav>
+        <a href="/sviproizvodi">Pogledaj sve proizvode</a>
+        <a href="/dodajproizvod">Dodaj proizvod</a>
+    </nav>
+    <form action="/snimiproizvod" method="post">
+        <label for="kategorija">Izaberite kategoriju:</label>
+        <select name="kategorija" id="kategorija">
+        <option value="stolovi">Stolovi</option>
+        <option value="stolice">Stolice</option>
+        <option value="laptopovi">Laptopovi</option>
+        <option value="monitori">Monitori</option>
+        </select>
+        <br>
+        <label>Cena:</label><input type="text" name="iznos">
+        <select name="valuta" id="valuta">
+            <option value="rsd">rsd</option>
+            <option value="eur">eur</option>
+            </select>
+        <br>
+        <textarea id="tekstoglasa" name="tekstoglasa" rows="4" cols="50" placeholder="Unesite tekst oglasa"></textarea>
+        <br>
+        <label>Oznake: </label>
+        <input type="text" name="oznake" placeholder="unesite oznake (tagove)" size="45">
+        <br>
+        <button type="submit">Dodaj proizvod</button>
+    </form>
+</body>
+</html>
