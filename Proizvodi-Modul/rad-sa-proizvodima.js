@@ -28,6 +28,24 @@ exports.addProizvod = (noviProizvod) => {
     snimiProizvode(proizvodi);
 }
 
+exports.addAkcija = (id,novaAkcija) => {
+    proizvodi=this.sviProizvodi();
+    proizvodi.forEach(proizvod => {
+        if(proizvod.id==id){
+            proizvod.akcije.push(novaAkcija);
+        }
+    });
+    snimiProizvode(proizvodi);   
+}
+
 exports.deleteProizvod = (id) => {
     snimiProizvode(this.sviProizvodi().filter(proizvod=>proizvod.id!=id));
+}
+
+exports.getProizvod = (id) => {
+    return this.sviProizvodi().find(x => x.id == id);
+}
+
+exports.getProizvodByKategorija = (kategorija) =>{
+    return this.sviProizvodi().filter(proizvod=>proizvod.kategorija==kategorija);
 }
