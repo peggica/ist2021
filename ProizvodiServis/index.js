@@ -20,22 +20,27 @@ app.post('/dodajproizvod',(request, response)=>{
     response.end("OK");
 })
 
-app.post('/snimiakciju/:id',(request, response)=>{
-    proizvodi.addAkcija(request.params["id"],request.body);
-    response.end("OK");
-})
-
-app.delete('/deleteproizvod/:id',(request, response)=>{
-    proizvodi.deleteProizvod(request.params["id"],request.body);
-    response.end("OK");
+app.get('/getproizvodbykategorija',(request, response)=>{
+    response.send(proizvodi.getProizvodByKategorija(request.query["kategorija"]));
 });
 
 app.get('/getproizvod/:id',(request, response)=>{
     response.send(proizvodi.getProizvod(request.params["id"]));
 });
 
-app.get('/getproizvodbykategorija',(request, response)=>{
-    response.send(proizvodi.getProizvodByKategorija(request.query["kategorija"]));
+app.delete('/deleteproizvod/:id',(request, response)=>{
+    proizvodi.deleteProizvod(request.params["id"],request.body);
+    response.end("OK");
+});
+
+app.post('/snimiakciju/:id',(request, response)=>{
+    proizvodi.addAkcija(request.params["id"],request.body);
+    response.end("OK");
+})
+
+app.post('/snimiizmene/:id',(request, response)=>{
+    proizvodi.izmeniProizvod(request.params["id"],request.body);
+    response.end("OK");
 });
 
 app.listen(port,() => {console.log(`server startovan na portu ${port}`)});
