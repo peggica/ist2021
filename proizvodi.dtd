@@ -1,0 +1,12 @@
+<!ELEMENT proizvodi (proizvod*)>
+<!ELEMENT proizvod (cena,tekstoglasa,oznake,akcije?)> 
+<!ELEMENT cena (#PCDATA)>
+<!ELEMENT tekstoglasa (#PCDATA)>
+<!ELEMENT oznake (oznaka+)>
+<!ELEMENT oznaka (#PCDATA)>
+<!ELEMENT akcije (akcija+)>
+<!ELEMENT akcija (cena, datumisteka)>
+<!ELEMENT datumisteka (#PCDATA)>
+
+<!ATTLIST proizvod kategorija (laptopovi|monitori|stolice|stolovi) #REQUIRED>
+<!ATTLIST cena valuta (rsd|eur) "rsd">
