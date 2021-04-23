@@ -1,10 +1,10 @@
 <!ELEMENT proizvodi (proizvod*)>
-<!ELEMENT proizvod (cena,tekstoglasa,oznake,akcije?)> 
+<!ELEMENT proizvod (cena,tekstoglasa,oznake,akcije)> 
 <!ELEMENT cena (#PCDATA)>
 <!ELEMENT tekstoglasa (#PCDATA)>
 <!ELEMENT oznake (oznaka+)>
 <!ELEMENT oznaka (#PCDATA)>
-<!ELEMENT akcije (akcija+)>
+<!ELEMENT akcije (akcija*)>
 <!ELEMENT akcija (cena, datumisteka)>
 <!ELEMENT datumisteka (#PCDATA)>
 
